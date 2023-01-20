@@ -2,14 +2,36 @@
 import CardDemo from "../components/Card-Demo.astro";
 import FooterDemo from "../components/Footer-Demo.astro";
 import LayoutMain from "../layouts/Layout-Main.astro";
+import DetailAboutDemo from "../components/Detail-About-Demo.astro";
+const detail_1 = await Astro.glob('../config/detail-about/detail-1.md');
+const detail_2 = await Astro.glob('../config/detail-about/detail-2.md');
+const detail_3 = await Astro.glob('../config/detail-about/detail-3.md');
+const detail_4 = await Astro.glob('../config/detail-about/detail-4.md');
+const detail_5 = await Astro.glob('../config/detail-about/detail-5.md');
+const detail_6 = await Astro.glob('../config/detail-about/detail-6.md');
+
+const first_detail = detail_1[0].frontmatter;
+const second_detail = detail_2[0].frontmatter;
+const third_detail = detail_3[0].frontmatter;
+const fourty_detail = detail_4[0].frontmatter;
+const five_detail = detail_5[0].frontmatter;
+const six_detail = detail_6[0].frontmatter;
 ---
 
 <LayoutMain>
-    <article>
-        <p>asdasd</p>
-    </article>
+    <DetailAboutDemo title={first_detail.title} detail={first_detail.detail}/>
+    <DetailAboutDemo title={second_detail.title} detail={second_detail.detail}/>
+    <DetailAboutDemo title={third_detail.title} detail={third_detail.detail}/>
+    <DetailAboutDemo title={fourty_detail.title} detail={fourty_detail.detail}/>
 
+    <figure class="h-full w-[83vw] mx-auto md:w-4/5">
+        <img class="object-fill" src="https://ableton-production.imgix.net/about/poster-meet-the-makers.jpg?auto=format&fit=crop&fm=jpg&ixjsv=1.1.3&w=full" alt="">
+    </figure>
 
+    <DetailAboutDemo title={five_detail.title} detail={five_detail.detail} plus={five_detail.detail_plus}/>
+    
+
+    <DetailAboutDemo title={six_detail.title} detail={six_detail.detail}/>
     <CardDemo/>
     <FooterDemo/>
 </LayoutMain>
