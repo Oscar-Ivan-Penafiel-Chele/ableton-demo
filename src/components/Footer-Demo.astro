@@ -1,0 +1,88 @@
+---
+import LinksDetailDemo from "./footer-components/Links-Detail-Demo.astro";
+import SocialMediaDemo from "./footer-components/Social-Media-Demo.astro";
+import DetailsLinks from '../config/details-demo.json'
+import FooterLinks from '../config/links-demo.json'
+
+const storage = DetailsLinks[0];
+const links = FooterLinks;
+---
+
+<footer class="w-full py-20 border-2 border-transparent border-t-neutral-200">
+    <h1 class="font-bold text-5xl">Ableton</h1>
+
+   <section class="container flex w-full flex-col-reverse mt-12 md:mt-20 md:flex-row">
+        <div class="flex-auto w-80 flex flex-col mt-10 md:flex-row md:mt-0">
+            <div class="flex-1 ">
+               <LinksDetailDemo details={storage.details.data}/>
+               <SocialMediaDemo/>
+            </div>
+            <div class="flex-1 mt-10 md:mt-0">
+                <LinksDetailDemo title={storage.education.title} details={storage.education.data}/>
+            </div>
+        </div>
+
+        <div class="flex-auto w-full md:w-20 ">
+            <h1 class="font-semibold text-sm md:text-lg">Sign up to our newsletter</h1>
+            <p class="text-sm md:text-lg text-justify">Enter your email address to stay up to date with the latest offers, tutorials, downloads, surveys and more.</p>
+            
+            <article class="flex mt-6 w-full">
+                <input class="flex-auto bg-[#EEEEEE] py-2 px-4 text-sm w-full md:w-60 md:text-lg" type="text" placeholder="Email Address">
+                <button class="flex-auto bg-[#0000FF] text-white py-2 w-1/4 px-4 font-bold text-sm md:w-10 md:text-lg">Sign up</button>
+            </article>
+        </div>
+   </section>
+
+   <section class="flex flex-col my-10 md:my-12 md:flex-row">
+        <div class="flex-auto w-80 flex flex-col md:flex-row">
+            <div class="flex-1 ">
+                <LinksDetailDemo title={storage.community.title} details={storage.community.data}/>
+            </div>
+            <div class="flex-1 mt-10 md:mt-0">
+                <LinksDetailDemo title={storage.distributors.title} details={storage.distributors.data}/>
+            </div>
+        </div>
+
+        <div class="flex-auto w-full mt-10 md:w-20 md:mt-0">
+            <h1 class="font-semibold text-sm md:text-lg">Language and Location</h1>
+            <article class="mt-4">
+                <select class="w-36 bg-[#EEEEEE] text-sm font-medium py-1 px-3" name="idioma" id="idioma">
+                    <option value="red">English</option>
+                    <option value="purple">Purple</option>
+                </select>
+                <select class="w-52 bg-[#EEEEEE] text-sm font-medium py-1 px-3" name="country" id="country">
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+            </article>
+        </div>
+    </section>
+
+   <section class="flex justify-between mt-10 flex-col md:flex-row md:mt-20 ">
+        <div class="font-medium flex gap-4 flex-col md:flex-row">
+            {
+                links.map((link: any)=>(
+                    Object.keys(link).map((x)=>(   
+                        <a class="text-xs" href={link[x].url}>{link[x].text}</a>
+                    ))
+                    
+                ))
+            }
+        </div>
+        <figcaption class="flex gap-2 mt-10 flex-row-reverse justify-end md:mt-0 md:flex-row">
+            <p class="font-medium text-xs">Made in Berlin</p>
+            <svg role="img" aria-labelledby="logo" class="main-nav__logo__image" xmlns="http://www.w3.org/2000/svg" width="45" height="21" viewBox="0 0 45 21">
+                <title id="logo">Ableton Homepage</title>
+                <path d="M0 0h3v21H0zM6 0h3v21H6zM12 0h3v21h-3zM18 0h3v21h-3zM24 18h21v3H24zM24 12h21v3H24zM24 6h21v3H24zM24 0h21v3H24z"></path>
+            </svg>
+        </figcaption>
+   </section>
+</footer>
+
+<style>
+    footer{
+        width: 100vw;
+        padding: 0% 8%;
+        margin: auto;   
+    }
+</style>

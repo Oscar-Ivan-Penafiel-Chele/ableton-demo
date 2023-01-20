@@ -1,0 +1,20 @@
+ [
+    {
+        "details" : {
+            "data": ["Register Live or Push","About Ableton ","Jobs"],
+            "title": ""
+        },
+        "education" : {
+            "data": ["Offers for students and teachers","Ableton for the Classroom","Ableton for Colleges and Universities"],
+            "title": "Education"
+        },
+        "community" : {
+            "data": ["Find Ableton User Groups","Find Certified Training","Become a Certified Trainer"],
+            "title": "Community"
+        },
+        "distributors" : {
+            "data": ["Find Distributors","Try Push in-store"],
+            "title": "Distributors"
+        }
+    }
+]

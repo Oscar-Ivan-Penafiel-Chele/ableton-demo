@@ -1,0 +1,19 @@
+---
+interface Props{
+    title?: string,
+    details: string[]
+}
+
+const {title, details} = Astro.props;
+---
+
+<div>
+    <p class="font-semibold text-sm md:text-lg">{title}</p>
+    <article class="flex flex-col">
+        {   
+            details.map((detail) => (
+                <a class="w-fit py text-sm py-1 md:text-lg" href="">{detail}<i class='bx bx-chevron-right'></i></a>
+            ))
+        }
+    </article>
+</div>

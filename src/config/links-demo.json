@@ -1,0 +1,28 @@
+[
+    {
+        "contact" : {
+            "url": "/",
+            "text": "Contact us"
+        },
+        "press" : {
+             "url": "/",
+            "text": "Press Resource"
+        },
+        "legal" : {
+             "url": "/",
+            "text": "Legal Info"
+        },
+        "privacy" : {
+             "url": "/",
+            "text": "Privacy Policy"
+        },
+        "cookie" : {
+             "url": "/",
+            "text": "Cookie Settings"
+        },
+        "imprint" : {
+             "url": "/",
+            "text": "Imprint"
+        }
+    }
+]
