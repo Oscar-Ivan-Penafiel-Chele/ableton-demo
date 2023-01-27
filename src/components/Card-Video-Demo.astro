@@ -1,0 +1,25 @@
+<section class="w-full flex flex-col items-center">
+   <div class="w-9/12 md:w-6/12">
+    <div class="relative">
+        <iframe 
+            id="video" 
+            class="w-full aspect-video"
+            src="https://www.youtube.com/embed/9SbnhgjeyXA" 
+            title="Why Ableton - Juanpe" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+        <div id="overlay__video" class="absolute top-0 w-full h-full flex justify-center items-center hover:cursor-pointer">
+            <img class="object-fill" src="images/overlay_video.jpg" alt="">
+            <span class="bg-[#0000FF] rounded-full p-9 absolute">
+                <i class="gg-play-button text-white "></i>
+            </span>
+        </div>
+        <div id="overlay__charging" class="absolute top-0 w-full h-full bg-zinc-400 hidden"></div>
+    </div>
+    <p class="pl-2 pt-2 text-sm">Why Ableton - Juanpe Bolivar</p>
+   </div>
+</section>
+
+<script>
+   import '../js/video-demo'
+</script>

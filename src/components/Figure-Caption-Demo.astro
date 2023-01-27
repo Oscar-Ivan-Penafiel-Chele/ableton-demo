@@ -1,0 +1,33 @@
+---
+interface Props{
+    color: string,
+    isReverse: boolean
+}
+
+const {color, isReverse} = Astro.props;
+
+const positions =  isReverse ? 'right-[42%] left-0' : 'right-0 left-[42%]' ;
+const direction = isReverse ? 'flex-row-reverse' : 'flex-row';
+const prefixePadding = isReverse ? 'pr' : 'pl' ;
+const prefixeMargin = isReverse ? 'mr' : 'ml' ;
+const images =  isReverse ? 
+                {first: 'images/3.jpg', second: ['images/1.jpg','images/2.jpg']} :
+                {first: 'images/4.jpg', second: ['images/5.jpg']}
+---
+<section class="w-full h-full relative">
+    <div class:list={["w-full flex justify-center items-center px-[10%] py-12 md:py-32", direction]}>
+        <figure class="w-full z-10">
+            <img class="w-[41.66vw]" src={images.first} alt="">
+        </figure>
+        <figure class="w-full z-10">
+            {
+                images.second.map((img: any, index: number)=>(
+                    <img class:list={["w-[60vw] md:w-[35vw]", `${prefixePadding}-10 md:${prefixeMargin}-20 2xl:${prefixePadding}-32`, {'mt-20': index == 1}]} src={img} alt="">
+                ))
+            }
+           
+        </figure>
+    </div>
+    
+    <div class:list={["absolute h-full top-0 z-0", `${color}`, positions]}></div> : 
+</section>
