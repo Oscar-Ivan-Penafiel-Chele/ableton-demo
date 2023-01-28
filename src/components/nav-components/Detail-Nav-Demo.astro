@@ -1,0 +1,35 @@
+---
+import DetailsMoreNav from '../../config/details-more-nav.json'
+import DetailsNav from '../../config/detail-nav.json'
+
+const data = DetailsNav;
+const dataMore = DetailsMoreNav;
+---
+
+<section class="w-full">
+    <div class="w-full">
+        <span class="font-semibold text-[1.6rem]">More on Ableton.com:</span>
+        <article>
+            {
+                data.map((item, index)=>(
+                    <a class:list={["text-lg", {"text-[#FF7675]" : item.color}]} href={item.url}>{item.detail}</a>
+                ))
+            }
+        </article>
+    </div>
+    <div class="w-full">
+        <span class="font-semibold text-[1.6rem]">More from Ableton:</span>
+        <div class="grid grid-cols-4 gap-4">
+            {
+                dataMore.map((item) => (
+                    <a href={item.url}>
+                        <section>
+                            <span class="text-lg font-semibold">{item.title}</span>
+                            <p class="text-lg">{item.detail}</p>
+                        </section>
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</section>

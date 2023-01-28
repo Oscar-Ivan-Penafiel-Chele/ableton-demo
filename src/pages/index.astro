@@ -7,6 +7,7 @@ import FigureDetailDemo from "../components/Figure-Detail-Demo.astro";
 import FigureCaptionDemo from "../components/Figure-Caption-Demo.astro";
 import CardVideoDemo from "../components/Card-Video-Demo.astro";
 import FigureHeaderDemo from "../components/Figure-Header-Demo.astro";
+import NavigationDemo from "../components/Navigation-Demo.astro";
 
 const detail_1 = await Astro.glob('../config/detail-about/detail-1.md');
 const detail_2 = await Astro.glob('../config/detail-about/detail-2.md');
@@ -24,6 +25,7 @@ const six_detail = detail_6[0].frontmatter;
 ---
 
 <LayoutMain>
+    <NavigationDemo/>
     <FigureHeaderDemo/>
     <DetailAboutDemo title={first_detail.title} detail={first_detail.detail}/>
     <FigureCaptionDemo color="bg-[#FBFFA7]" isReverse={false}/>

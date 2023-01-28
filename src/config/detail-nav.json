@@ -1,0 +1,32 @@
+[
+    {
+        "detail": "Blog",
+        "url": "/"
+    },
+    {
+        "detail": "Ableton for the Classroom",
+        "url": "/"
+    },
+    {
+        "detail": "Ableton for Colleges and Universities",
+        "url": "/"
+    },
+    {
+        "detail": "Certified Training",
+        "url": "/"
+    },
+    {
+        "detail": "About Ableton",
+        "url": "/",
+        "color": "text-[#FF7675]"
+    },
+    {
+        "detail": "Jobs",
+        "url": "/"
+    },
+    {
+        "detail": "Apprenticeships",
+        "url": "/"
+    }
+]
+

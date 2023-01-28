@@ -1,0 +1,46 @@
+---
+import IconDemo from "./Icon-Demo.astro";
+import DetailNavDemo from "./nav-components/Detail-Nav-Demo.astro";
+import LinksNav from "./nav-components/Links-Nav-Demo.astro";
+import SubLinksNavDemo from "./nav-components/SubLinks-Nav-Demo.astro";
+---
+<section class="pl-10 py-5 w-full h-full border-2 border-indigo-20">
+   <article class="flex items-center justify-between relative">
+        <div class="flex flex-row">
+            <IconDemo width="w-[3.75rem]" height="h-[1.75em]"/>
+            <LinksNav/>
+        </div>
+
+        <div class="mr-12 font-medium flex items-center justify-between gap-4">
+            <a class="text-[#0000FF] text-lg" href="/">Try Live for free</a>
+            <a class="font-semibold text-[.9rem]" href="/">Log in or register</a>
+        </div>
+   </article>
+   <article class="">
+        <DetailNavDemo/>
+   </article>
+</section>
+
+<section class="px-12 py-5 font-semibold">
+    <SubLinksNavDemo/>
+</section>
+
+
+<!-- <script>
+    class LinksNav extends HTMLElement {
+        constructor() {
+        super();
+        let count = 0;
+
+        const heartButton = this.querySelector('button');
+        const countSpan = this.querySelector('span');
+
+        // Each time the button is clicked, update the count.
+        heartButton!.addEventListener('click', () => {
+            alert("Hola")
+        });
+        }
+    }
+
+    customElements.define('LinksNav', LinksNav);
+</script> -->
