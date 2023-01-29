@@ -4,43 +4,37 @@ import DetailNavDemo from "./nav-components/Detail-Nav-Demo.astro";
 import LinksNav from "./nav-components/Links-Nav-Demo.astro";
 import SubLinksNavDemo from "./nav-components/SubLinks-Nav-Demo.astro";
 ---
-<section class="pl-10 py-5 w-full h-full border-2 border-indigo-20">
-   <article class="flex items-center justify-between relative">
-        <div class="flex flex-row">
+<section class="
+                flex flex-col py-5 w-full h-full border-b-2 border-indigo-20 text-sm pl-5 bg-[#0000FF]
+                lg:bg-transparent xl:pl-10 relative xl:text-lg"
+>
+    <div class="flex w-full h-full cl">
+        <div class="flex flex-row gap-5">
             <IconDemo width="w-[3.75rem]" height="h-[1.75em]"/>
-            <LinksNav/>
+            <article class="flex flex-row gap-1">
+                <p class="flex text-lg font-semibold lg:hidden">Menu</p>
+                <i class='bx bxs-down-arrow pt-3 text-[10px]'></i>
+            </article>
         </div>
+        
+        <article class="
+            w-full flex flex-col z-10 relative top-0 -left-[8.5rem] pt-16 text-white
+            lg:left-0 lg:pt-0 lg:relative lg:flex-row lg:items-center lg:justify-between">
 
-        <div class="mr-12 font-medium flex items-center justify-between gap-4">
-            <a class="text-[#0000FF] text-lg" href="/">Try Live for free</a>
-            <a class="font-semibold text-[.9rem]" href="/">Log in or register</a>
-        </div>
-   </article>
-   <article class="">
+            <div>
+                <LinksNav/>
+            </div>
+            <div class="mr-12 font-medium flex flex-col mt-5 gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-3 xl:gap-4">
+                <a class="lg:text-[#0000FF]" href="/">Try Live for free</a>
+                <a class="font-semibold text-sm xl:text-[.9rem]" href="/">Log in or register</a>
+            </div>
+        </article> 
+    </div>
+    <article id="detail_nav" class="">
         <DetailNavDemo/>
    </article>
 </section>
 
-<section class="px-12 py-5 font-semibold">
+<section class="px-6 py-5 font-semibold xl:px-12">
     <SubLinksNavDemo/>
 </section>
-
-
-<!-- <script>
-    class LinksNav extends HTMLElement {
-        constructor() {
-        super();
-        let count = 0;
-
-        const heartButton = this.querySelector('button');
-        const countSpan = this.querySelector('span');
-
-        // Each time the button is clicked, update the count.
-        heartButton!.addEventListener('click', () => {
-            alert("Hola")
-        });
-        }
-    }
-
-    customElements.define('LinksNav', LinksNav);
-</script> -->

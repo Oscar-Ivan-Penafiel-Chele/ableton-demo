@@ -1,12 +1,17 @@
-<ul class="flex text-lg font-medium gap-7">
-    <li class="pl-9"><a href="/">Live</a></li>
+<ul class="flex flex-col font-medium gap-5 xl:gap-7 lg:flex-row">
+    <li class="pl-0 lg:pl-5 xl:pl-9"><a href="/">Live</a></li>
     <li><a href="/">Push</a></li>
     <li><a href="/">Note</a></li>
     <li><a href="/">Link</a></li>
     <li><a href="/">Shop</a></li>
     <li><a href="/">Packs</a></li>
     <li><a href="/">Help</a></li>
-    <li><p class="text-[#FD5948] flex items-center gap-1 hover:cursor-pointer">More <i class='bx bx-plus h-full pt-1' ></i></p></li>
+    <li class="hidden lg:block">
+        <button id="button_more" class="text-[#FD5948] flex items-center gap-1 hover:cursor-pointer">
+            More 
+            <i id="icon_nav" class='bx bx-plus h-full pt-1' ></i>
+        </button>
+    </li>
 </ul>
 
 <!-- <i class='bx bx-minus' ></i> -->

@@ -6,10 +6,10 @@ const data = DetailsNav;
 const dataMore = DetailsMoreNav;
 ---
 
-<section class="w-full">
+<section class="w-full py-10">
     <div class="w-full">
         <span class="font-semibold text-[1.6rem]">More on Ableton.com:</span>
-        <article>
+        <article class="flex flex-col gap-7 py-5 lg:flex-row">
             {
                 data.map((item, index)=>(
                     <a class:list={["text-lg", {"text-[#FF7675]" : item.color}]} href={item.url}>{item.detail}</a>
@@ -17,9 +17,9 @@ const dataMore = DetailsMoreNav;
             }
         </article>
     </div>
-    <div class="w-full">
+    <div class="w-full mt-5">
         <span class="font-semibold text-[1.6rem]">More from Ableton:</span>
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid grid-cols-4 gap-7 mr-12 pt-5">
             {
                 dataMore.map((item) => (
                     <a href={item.url}>
