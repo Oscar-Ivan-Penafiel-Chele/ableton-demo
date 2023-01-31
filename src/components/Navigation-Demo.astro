@@ -4,35 +4,36 @@ import DetailNavDemo from "./nav-components/Detail-Nav-Demo.astro";
 import LinksNav from "./nav-components/Links-Nav-Demo.astro";
 import SubLinksNavDemo from "./nav-components/SubLinks-Nav-Demo.astro";
 ---
-<section class="
-                flex flex-col py-5 w-full h-full border-b-2 border-indigo-20 text-sm pl-5 bg-[#0000FF]
-                lg:bg-transparent xl:pl-10 relative xl:text-lg"
->
-    <div class="flex w-full h-full cl">
-        <div class="flex flex-row gap-5">
-            <IconDemo width="w-[3.75rem]" height="h-[1.75em]"/>
-            <article class="flex flex-row gap-1">
-                <p class="flex text-lg font-semibold lg:hidden">Menu</p>
-                <i class='bx bxs-down-arrow pt-3 text-[10px]'></i>
-            </article>
+<section class="flex flex-col w-full h-full border-b-2 border-indigo-20 text-sm">
+    <div class="w-full h-full xl:pl-10 xl:text-lg ">
+        <div class="flex flex-col w-full relative lg:flex-row"> 
+            <div class="h-full flex flex-row gap-5 py-5 pl-6 z-20 lg:pl-6 xl:pl-2">
+                <figure id="svg_icon">
+                    <IconDemo width="w-[3.75rem]" height="h-[1.75em]"/>
+                </figure>
+                <button id="menu_nav" class:list={["flex flex-row gap-1 hover:cursor-pointer lg:hidden"]}>
+                    <p class="flex text-lg font-semibold">Menu</p>
+                    <i id="icon_display" class='bx bxs-down-arrow pt-3 text-[10px]'></i>
+                </button>
+            </div>
+            
+            <article id="links_nav" class="
+                bg-[#0000FF] text-white w-full flex flex-col z-10 absolute -translate-y-full pl-6 pt-14 duration-300
+                lg:text-black lg:pl-3 lg:duration-0 lg:bg-transparent lg:translate-y-0 lg:pt-0 lg:relative lg:flex-row lg:items-center lg:justify-between">
+    
+                <div>
+                    <LinksNav/>
+                </div>
+                <div class="mr-12 font-medium flex flex-col mt-5 gap-5 lg:flex-row lg:mt-0 lg:items-center lg:justify-between lg:gap-3 xl:gap-4">
+                    <a class="w-max text-lg lg:text-[#0000FF] xl:text-lg" href="/">Try Live for free</a>
+                    <a class="w-max font-semibold text-sm xl:text-[.9rem]" href="/">Log in or register</a>
+                </div>
+            </article> 
         </div>
-        
-        <article class="
-            w-full flex flex-col z-10 relative top-0 -left-[8.5rem] pt-16 text-white
-            lg:left-0 lg:pt-0 lg:relative lg:flex-row lg:items-center lg:justify-between">
-
-            <div>
-                <LinksNav/>
-            </div>
-            <div class="mr-12 font-medium flex flex-col mt-5 gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-3 xl:gap-4">
-                <a class="lg:text-[#0000FF]" href="/">Try Live for free</a>
-                <a class="font-semibold text-sm xl:text-[.9rem]" href="/">Log in or register</a>
-            </div>
-        </article> 
+        <article id="detail_nav" class="text-white absolute -top-[200vh] duration-300 z-20 bg-[#0000FF] lg:text-black lg:hidden lg:relative lg:top-0 lg:bg-transparent lg:duration-0">
+            <DetailNavDemo/>
+        </article>
     </div>
-    <article id="detail_nav" class="">
-        <DetailNavDemo/>
-   </article>
 </section>
 
 <section class="px-6 py-5 font-semibold xl:px-12">
