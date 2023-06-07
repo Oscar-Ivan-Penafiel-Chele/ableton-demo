@@ -9,7 +9,7 @@ npm create astro@latest -- --template minimal
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## Link Demo
+## 💻 Link Demo
 https://fanciful-melomakarona-3ee06b.netlify.app/
 
 ## 🚀 Project Structure
