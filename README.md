@@ -9,6 +9,9 @@ npm create astro@latest -- --template minimal
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
+## Link Demo
+https://fanciful-melomakarona-3ee06b.netlify.app/
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
